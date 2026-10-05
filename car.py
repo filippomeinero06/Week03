@@ -7,6 +7,7 @@ class Car: # Per convenzione le classi hanno iniziale maiuscola
         self.color = color
         self.turned_on = False
 
+    # METODI (ovvero le funzioni messe a disposizione di una classe)
     # Metodo per verniciare le macchine
     def paint(self, color):
         self.color = color
@@ -14,6 +15,9 @@ class Car: # Per convenzione le classi hanno iniziale maiuscola
     # Metodo per accendere le macchine
     def turn_on(self):
         self.turned_on = True
+
+    # Funzione particolare __del__ per fare qualcosa prima di eliminare un oggetto
+    # es. salvare le informazioni sul disco
 
 
 #c1 = Car() # Creo un oggetto di classe/tipo Car
@@ -56,4 +60,3 @@ c2.turn_on()
 # gli oggetti creati con il costruttore
 c1.number_of_doors = 2 # E' una variabile di classe, di istanza, oppure ... ?
 
-pass
