@@ -11,7 +11,7 @@ class Quadro:
 
     # Questo serve per ogni attributo che nascondiamo (2 metodi: GETTER e SETTER)
     # Metodo GETTER (leggere il valore di un attributo nascosto)
-    @property
+    @property # decoratori
     def anno(self):
         return self.__anno
 
@@ -24,7 +24,7 @@ class Quadro:
     # Metodo che consente al quadro di descriversi come stringa
     # __str__ come alternativa a nomi più bizzarri come descriviti(self), ...
     def __str__(self):
-        return (f"{self.__artista}, {self.__titolo}, {self.__materiali}, {self.__anno}")
+        return f"{self.__artista}, {self.__titolo}, {self.__materiali}, {self.__anno}"
 
 
 q1 = Quadro("Van Gogh", "Autoritratto", "Olio su tela", 1870)
@@ -57,3 +57,12 @@ q1 = Quadro("Van Gogh", "Autoritratto", "Olio su tela", 1870)
 # print(q1.descriviti()) # ho DELEGATO al quadro il compito di stamparsi
 
 print(q1.__str__())
+
+
+q1.anno = 5 # Python usa il metodo setter/getter per accedere agli attributi, se definiti
+
+print(q1.anno)
+
+# Equivalentemente
+q1.anno(5)
+print(q1.anno)
